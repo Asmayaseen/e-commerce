@@ -6,13 +6,14 @@ import { CiShoppingCart } from "react-icons/ci";
 
 const OurProducts = () => {
   const products2 = [
-    { id: 1, title: "Sandles for womens", price: "$65.90", isNew: true, image: "/product3.jpg" },
+    { id: 1, title: "Sandles for womens", price: "$65.90", isNew: true, image: "/download (1).png" },
     { id: 2, title: "Shirts for man", price: "$60.20", oldPrice: "$70", isSale: true, image: "/top4.jpg" },
     { id: 3, title: "Perfume Collection for men", price: "$230", isNew: true, image: "/product6.jpg" },
     { id: 4, title: "Shoes for men", price: "$50", isNew: true, image: "/product27.jpg" },
     { id: 5, title: "Bags Collection for women", price: "$40", isNew: true, image: "/product15.jpg" },
     { id: 6, title: "Perfume for men and women", price: "$30", oldPrice: "$40", isSale: true, image: "/product22.jpg" },
     { id: 7, title: "Shoes for women", price: "$40", oldPrice: "$70", isSale: true, image: "/product14.jpg" },
+    { id: 8, title: "Sandles for womens", price: "$95.90", isNew: true, image: "/product16.jpg" },
   ];
 
   return (

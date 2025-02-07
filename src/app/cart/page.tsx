@@ -1,119 +1,128 @@
+import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { CiHeart } from "react-icons/ci";
-import { RiDeleteBin6Line } from "react-icons/ri";
 
-const Cart = () => {
+const CartPage = () => {
   return (
-    <div className="max-w-[1321px] mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Cart Items */}
-        <div className="lg:col-span-2">
-          <h2 className="text-[22px] font-medium pl-3 mb-6">Bag</h2>
+    <div className="bg-gray-50 min-h-screen max-w-[1100px] mx-auto">
+      <div className="container mx-auto px-4 py-4">
+        <p className="text-sm text-gray-600">
+          <Link href="/" className="text-gray-800 hover:underline">
+            Home
+          </Link>
+          / <span className="text-gray-500">Cart</span>
+        </p>
+      </div>
 
-          {/* Item 1 */}
-          <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md mb-4">
-            <div className="flex items-center space-x-4">
-              <div className="w-24 h-24 bg-200 rounded">
-                <Image
-                  src="/top1.jpg"
-                  alt="Color Cosmatics"
-                  width={65}
-                  height={65}
-                  style={{ width: "auto", height: "auto" }}
-                  className="object-cover rounded"
-                  priority // Add this line to prioritize the image loading
-                />
-              </div>
-              <div>
-                <h3 className="text-[16px] font-normal text-[#272343] mb-3">
-                  Color Cosmatics
-                </h3>
-                <p className="text-sm text-gray-500 mb-1"></p>
-                <div className="flex space-x-12">
-                  <p className="text-[15px] font-normal text-[#757575]">
-                    Size: Medium
-                  </p>
-                  <p className="text-[15px] font-normal text-[#757575]">
-                    Quantity: 1
-                  </p>
-                </div>
-                <div className="flex gap-3 mt-3">
-                  <CiHeart />
-                  <RiDeleteBin6Line />
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <p className="text-[16px] font-normal text-[#111111]">MRP:</p>
-              <p className="text-[16px] font-normal text-[#111111]">$80</p>
-            </div>
+      <div className="container mx-auto">
+        <div className="bg-white shadow-md rounded-md overflow-hidden">
+          <table className="w-full text-left">
+            <thead className="bg-gray-100 text-gray-800 uppercase text-sm">
+              <tr>
+                <th className="py-3 px-2 sm:px-4">Product</th>
+                <th className="py-3 px-2 sm:px-4">Price</th>
+                <th className="py-3 px-2 sm:px-4">Quantity</th>
+                <th className="py-3 px-2 sm:px-4">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-600">
+              <tr className="border-b">
+                <td className="py-4 px-2 sm:px-4 flex items-center space-x-4">
+                  <Image
+                    src="/explore3.jpg"
+                    alt="Hand watch"
+                    className="w-12 h-12 object-cover"
+                    height={54}
+                    width={54}
+                  />
+                  <span className="text-xs sm:text-base">Wrist Watch</span>
+                </td>
+                <td className="py-4 px-2 sm:px-4">$250</td>
+                <td className="py-4 px-2 sm:px-4">
+                  <select className="border rounded-md px-2 py-1 text-xs sm:text-sm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                </td>
+                <td className="py-4 px-2 sm:px-4">$250</td>
+              </tr>
+              <tr>
+                <td className="py-4 px-2 sm:px-4 flex items-center space-x-4">
+                  <Image
+                    src="/product3.jpg"
+                    alt="shoes"
+                    className="w-12 h-12 object-cover"
+                    height={54}
+                    width={54}
+                  />
+                  <span className="text-xs sm:text-base">Sandles</span>
+                </td>
+                <td className="py-4 px-2 sm:px-4">$220</td>
+                <td className="py-4 px-2 sm:px-4">
+                  <select className="border rounded-md px-2 py-1 text-xs sm:text-sm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                </td>
+                <td className="py-4 px-2 sm:px-4">$220</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="flex flex-col sm:flex-row justify-between items-center bg-gray-100 px-4 py-3 space-y-3 sm:space-y-0">
+            <Link
+              href="/"
+              className="w-full sm:w-[218px] h-[56px] border-2 py-3 text-center rounded-md hover:bg-gray-400"
+            >
+              Return To Shop
+            </Link>
+            <button className="w-full sm:w-[218px] h-[56px] border-2 py-3 text-center rounded-md hover:bg-gray-400">
+              Update Cart
+            </button>
           </div>
+        </div>
+      </div>
 
-          {/* Item 2 */}
-          <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md">
-            <div className="flex items-center space-x-4">
-              <div className="w-24 h-24 bg--300 rounded">
-                <Image
-                  src="/product21.jpg"
-                  alt="Jeans"
-                  width={96}
-                  height={96} // Set both width and height consistently
-                  style={{ width: "auto", height: "auto" }} // Ensure aspect ratio is preserved
-                  className="object-cover rounded"
-                />
-              </div>
-              <div>
-                <h3 className="text-[16px] font-normal text-[#272343] mb-3">
-                  Jeans
-                </h3>
-                <p className="text-[15px] font-normal text-[#757575] mb-1"></p>
-                <div className="flex space-x-12">
-                  <p className="text-[15px] font-normal text-[#757575]">
-                    Size: L
-                  </p>
-                  <p className="text-[15px] font-normal text-[#757575]">
-                    Quantity: 1
-                  </p>
-                </div>
-                <div className="flex gap-3 mt-3">
-                  <CiHeart />
-                  <RiDeleteBin6Line />
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <p className="text-[16px] font-normal text-[#111111]">MRP:</p>
-              <p className="text-[16px] font-normal text-[#111111]">$99</p>
-            </div>
+      <div className="container mx-auto px-4 mt-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">
+        <div className="flex-1 bg-white p-4 shadow-md rounded-md">
+          <h2 className="text-lg font-medium mb-4">Coupon</h2>
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
+            <input
+              type="text"
+              placeholder="Coupon Code"
+              className="w-full border rounded-md px-3 py-2"
+            />
+            <button className="bg-red-500 text-white px-4 py-[11px] rounded-md w-full sm:w-[30%] text-sm">
+              Apply Coupon
+            </button>
           </div>
         </div>
 
-        {/* Summary */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Summary</h2>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="flex justify-between mb-4">
-              <p className="text-lg">Subtotal</p>
-              <p className="text-lg font-semibold">$179.00</p>
+        <div className="w-full lg:w-1/3 bg-white p-4 shadow-md rounded-md">
+          <h2 className="text-lg font-medium mb-4">Cart Total</h2>
+          <div className="space-y-2">
+            <div className="flex justify-between text-sm">
+              <span>Subtotal:</span>
+              <span>$470</span>
             </div>
-            <div className="flex justify-between mb-4">
-              <p className="text-lg">Estimated Delivery & Handling</p>
-              <p className="text-lg font-semibold text-green-500">Free</p>
+            <div className="flex justify-between text-sm">
+              <span>Shipping:</span>
+              <span>Free</span>
             </div>
-            <hr className="mb-4" />
-            <div className="flex justify-between mb-6">
-              <p className="text-xl font-bold">Total</p>
-              <p className="text-xl font-bold">$179.00</p>
+            <div className="flex justify-between text-lg font-medium">
+              <span>Total:</span>
+              <span>$470</span>
             </div>
-            <button className="w-[334.67px] h-[60px] rounded-[30px] text-white bg-[#909edb]">
-              Member Checkout
-            </button>
           </div>
+          <button className="bg-red-500 text-white w-full mt-4 py-2 rounded-md">
+            Proceed to Checkout
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Cart;
+export default CartPage;

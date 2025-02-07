@@ -25,7 +25,7 @@ const Productpage = () => {
     { id: 19, label: 'New', title: 'Jeans for men & women', price: '$50', image: '/product21.jpg' },
     { id: 20, label: 'New', title: 'Perfumes for men & women', price: '$20', image: '/product22.jpg' },
     { id: 21, label: 'New', title: 'Shirt For Men & Women', price: '$20', image: '/product23.jpg' },
-    { id: 22, label: 'Sales', title: 'Shoes and Sandles', price: '$29410', image: '/product24.jpg' },
+    { id: 22, label: 'Sales', title: 'Shoes and Sandles', price: '$410', image: '/product24.jpg' },
     { id: 23, label: 'New', title: 'Color Cosmetics', price: '$240', image: '/product25.jpg' },
     { id: 24, label: 'Sales', title: 'Color Cosmetics', price: '$120', image: '/product26.jpg' },
     { id: 25, label: 'New', title: 'Shoes', price: '$270', image: '/product27.jpg' },

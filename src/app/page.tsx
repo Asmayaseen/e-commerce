@@ -5,6 +5,7 @@ import Explore from "./components/Explore";
 import Ourproducts from "./components/Ourproducts";
 import Homepage from "./homepage/page";
 import AnnouncementBar from "./components/AnnouncmentBar";
+
 const page = () => {
   return (
     <div>
@@ -14,6 +15,8 @@ const page = () => {
       <Topcategories />
       <Explore />
       <Ourproducts />
+      
+     
     </div>
   );
 };
