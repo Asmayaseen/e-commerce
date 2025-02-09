@@ -1,4 +1,4 @@
-export default {
+const productSchema = {
   name: 'product',
   title: 'Product',
   type: 'document',
@@ -7,15 +7,28 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule: { required: () => any; }) => Rule.required(),
+      validation: (Rule: { required: () => { (): any; new(): any; min: { (arg0: number): { (): any; new(): any; max: { (arg0: number): any; new(): any; }; }; new(): any; }; }; }) => Rule.required().min(3).max(100),
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      validation: (Rule: { required: () => { (): any; new(): any; min: { (arg0: number): { (): any; new(): any; max: { (arg0: number): any; new(): any; }; }; new(): any; }; }; }) => Rule.required().min(10).max(500),
     },
     {
       name: 'label',
       title: 'Label',
       type: 'string',
       options: {
-        list: ['New', 'Sales'],
+        list: [
+          { title: 'New', value: 'new' },
+          { title: 'Sale', value: 'sale' },
+          { title: 'Best Seller', value: 'bestseller' },
+          { title: 'Limited Edition', value: 'limited' },
+        ],
+        layout: 'radio',
       },
+      validation: (Rule: { required: () => any; }) => Rule.required(),
     },
     {
       name: 'price',
@@ -30,13 +43,49 @@ export default {
       validation: (Rule: { min: (arg0: number) => any; }) => Rule.min(0),
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'sellPrice',
+      title: 'Sell Price',
+      type: 'number',
+      validation: (Rule: { required: () => { (): any; new(): any; min: { (arg0: number): any; new(): any; }; }; }) => Rule.required().min(0),
+    },
+    {
+      name: 'discount',
+      title: 'Discount (%)',
+      type: 'number',
+      validation: (Rule: { min: (arg0: number) => { (): any; new(): any; max: { (arg0: number): any; new(): any; }; }; }) => Rule.min(0).max(100),
+    },
+    {
+      name: 'isNew',
+      title: 'New Arrival',
+      type: 'boolean',
+    },
+    {
+      name: 'stock',
+      title: 'Stock Quantity',
+      type: 'number',
+      validation: (Rule: { required: () => { (): any; new(): any; min: { (arg0: number): any; new(): any; }; }; }) => Rule.required().min(0),
+    },
+    {
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: [{ type: 'category' }],
       validation: (Rule: { required: () => any; }) => Rule.required(),
+    },
+    {
+      name: 'image',
+      title: 'Product Image',
+      type: 'image',
+      options: { hotspot: true },
+      validation: (Rule: { required: () => any; }) => Rule.required(),
+    },
+    {
+      name: 'additionalImages',
+      title: 'Additional Images',
+      type: 'array',
+      of: [{ type: 'image', options: { hotspot: true } }],
     },
   ],
 };
+
+export default productSchema;

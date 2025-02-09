@@ -14,7 +14,7 @@ const TopCategories = () => {
               alt="blush"
               fill
               className="object-cover rounded-lg"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  // Added sizes prop
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
@@ -31,7 +31,7 @@ const TopCategories = () => {
               alt="shoes"
               fill
               className="object-cover rounded-lg"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  // Added sizes prop
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
@@ -48,11 +48,11 @@ const TopCategories = () => {
               alt="women"
               fill
               className="object-contain rounded-lg"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  // Added sizes prop
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
-            <h3 className="font-bold text-lg">Women's Collection</h3>
+            <h3 className="font-bold text-lg">Women&apos;s Collection</h3>
             <p>1,760 Products</p>
           </div>
         </div>
